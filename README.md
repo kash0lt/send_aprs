@@ -27,3 +27,21 @@ class aprs_secinfo():
 ```
 You get your APRS passcode from this web-site, using your call-sign  
 [PASSCODE-GENERATOR](https://n5dux.com/ham/aprs-passcode/)
+  
+---
+This section of the main code *send_aprs.py* uses what was placed in the *aprs_secinfo.py*  
+file or you can simply add your own string here and delete the instance of *aprssec*  
+from the code.
+  
+```
+APRS_SERVER = "rotate.aprs2.net"  # APRS-IS server
+APRS_PORT = 14580                # APRS-IS port
+aprssec = aprs_secinfo()
+
+CALLSIGN = aprssec.CALLSIGN       # Replace with your callsign
+PASSCODE = aprssec.PASSCODE      # Replace with your APRS passcode
+LATITUDE = aprssec.LATITUDE            # Replace with your latitude
+LONGITUDE = aprssec.LONGITUDE          # Replace with your longitude
+COMMENT = aprssec.COMMENT            # Optional status comment
+SYMBOL_CODE = aprssec.SYMBOL_CODE
+```

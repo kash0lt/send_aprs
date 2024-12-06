@@ -13,23 +13,6 @@ LONGITUDE = aprssec.LONGITUDE          # Replace with your longitude
 COMMENT = aprssec.COMMENT            # Optional status comment
 SYMBOL_CODE = aprssec.SYMBOL_CODE
 
-# Symbol Table Selector	Symbol Code	Represents
-# / (Primary Table)	>	Car
-# /	[	Running person
-# /	Y	Motorcycle
-# /	<	Sailboat
-# /	-	House or QTH (Home station)
-# /	A	Airplane
-# /	*	Snowmobile
-# /	p	Police station
-# /	h	Hospital
-# \ (Secondary Table)	&	Person (generic figure)
-# \	>	Car (secondary table)
-# \	o	Bicyclist
-# \	i	Truck
-# \	X	Helicopter
-
-
 # Construct the APRS packet
 aprs_packet = f"{CALLSIGN}>APRS,TCPIP*:!{LATITUDE}/{LONGITUDE}{SYMBOL_CODE} {COMMENT}"
 
