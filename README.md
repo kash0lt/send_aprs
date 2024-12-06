@@ -30,13 +30,13 @@ You get your APRS passcode from this web-site, using your call-sign
   
 ---
 This section of the main code *send_aprs.py* uses what was placed in the *aprs_secinfo.py*  
-file or you can simply add your own string here and delete the instance of *aprssec*  
+file or you can simply add your own strings here and delete the instance of *aprssec*  
 from the code.
   
 ```
 APRS_SERVER = "rotate.aprs2.net"  # APRS-IS server
 APRS_PORT = 14580                # APRS-IS port
-aprssec = aprs_secinfo()
+aprssec = aprs_secinfo()     # Comment or delete this line if you are using your own strings
 
 CALLSIGN = aprssec.CALLSIGN       # Replace with your callsign
 PASSCODE = aprssec.PASSCODE      # Replace with your APRS passcode
