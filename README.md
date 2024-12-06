@@ -8,7 +8,8 @@ The results are found by looking up the call-sign of the radio operator on
 
 ---
   
-You should either create your own support file called aprs_secinfo.py that has a class of the same name.  
+You should either create your own support file called aprs_secinfo.py that has a class of the same name, or replace the  
+   tags in the send_aprs.py file with your own data using strings    
 Here is a sample of a support script that hold authentication information.  
 
 ```
