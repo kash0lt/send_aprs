@@ -1,5 +1,6 @@
 aprs_secinfo.py
 send_aprs.c
+send*.exe
 .vscode/*
 __pycache__/*
 Include/*
