@@ -17,8 +17,8 @@ class aprs_secinfo():
     def __init__(self):
         self.CALLSIGN = "YOUR_CALL_SIGN_GOES_HERE"      # Replace with your callsign
         self.PASSCODE = "YOUR_PASSCODE_GOES_HERE"       # Replace with your APRS passcode
-        self.LATITUDE = "4021.41N"                      # Replace with your latitude
-        self.LONGITUDE = "11143.28W"                    # Replace with your longitude
+        self.LATITUDE = "ddhh.mmN"                      # Replace with your latitude in degress, hours, and decimal minutes N for north
+        self.LONGITUDE = "dddhh.mmW"                    # Replace with your longitude ddd degrees, hh hours, and decimal mm minutes W for west
         self.COMMENT = "APRS via Python script"  		# Optional status comment
         self.SYMBOL_CODE = "-"							# This indicates a house icon for APRS
 
