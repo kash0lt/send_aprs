@@ -2,7 +2,7 @@ import socket
 from aprs_secinfo import aprs_secinfo
 
 # Configuration
-APRS_SERVER = "rotate.aprs2.net"  # APRS-IS server
+APRS_SERVER = "noam.aprs2.net"  # APRS-IS server - rotate.aprs2.net is also a viable server
 APRS_PORT = 14580                # APRS-IS port
 aprssec = aprs_secinfo()
 
