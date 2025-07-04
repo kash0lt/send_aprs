@@ -20,7 +20,7 @@ class aprs_secinfo():
         self.LATITUDE = "ddhh.mmN"                      # Replace with your latitude in degress, hours, and decimal minutes N for north
         self.LONGITUDE = "dddhh.mmW"                    # Replace with your longitude ddd degrees, hh hours, and decimal mm minutes W for west
         self.COMMENT = "APRS via Python script"  		# Optional status comment
-        self.SYMBOL_CODE = "-"							# This indicates a house icon for APRS
+        self.SYMBOL_CODE = "/-"							# This indicates a house icon for APRS table one
 
     def about(self):
         print("APRS information about this users ham call sign and passcode to APRS")
@@ -43,5 +43,6 @@ PASSCODE = aprssec.PASSCODE      # Replace with your APRS passcode
 LATITUDE = aprssec.LATITUDE            # Replace with your latitude
 LONGITUDE = aprssec.LONGITUDE          # Replace with your longitude
 COMMENT = aprssec.COMMENT            # Optional status comment
-SYMBOL_CODE = aprssec.SYMBOL_CODE
+SYMBOL_TABLE = aprssec.SYMBOL_CODE[0]	# APRS table one or two
+SYMBOL_CODE = aprssec.SYMBOL_CODE[1]	# Table icon indicator
 ```
