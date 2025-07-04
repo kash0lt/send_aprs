@@ -1,10 +1,14 @@
 aprs_secinfo.py
 send_aprs.c
 send*.exe
+*.ipynb
 *.php
 .vscode/*
+.ipynb_checkpoints/*
 __pycache__/*
+etc/*
 Include/*
 Lib/*
 Scripts/*
+share/*
 pyvenv.cfg 

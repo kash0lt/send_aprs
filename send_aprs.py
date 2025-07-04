@@ -11,10 +11,11 @@ PASSCODE = aprssec.PASSCODE      # Replace with your APRS passcode
 LATITUDE = aprssec.LATITUDE            # Replace with your latitude
 LONGITUDE = aprssec.LONGITUDE          # Replace with your longitude
 COMMENT = aprssec.COMMENT            # Optional status comment
-SYMBOL_CODE = aprssec.SYMBOL_CODE
+SYMBOL_TABLE = aprssec.SYMBOL_CODE[0]
+SYMBOL_CODE = aprssec.SYMBOL_CODE[1]
 
 # Construct the APRS packet
-aprs_packet = f"{CALLSIGN}>APRS,TCPIP*:!{LATITUDE}/{LONGITUDE}{SYMBOL_CODE} {COMMENT}"
+aprs_packet = f"{CALLSIGN}>APRS,TCPIP*:!{LATITUDE}{SYMBOL_TABLE}{LONGITUDE}{SYMBOL_CODE} {COMMENT}"
 
 def send_aprs_packet(server, port, callsign, passcode, packet):
     try:
@@ -24,7 +25,7 @@ def send_aprs_packet(server, port, callsign, passcode, packet):
             print(f"Connected to {server}:{port}")
 
             # Authenticate with the server
-            auth_message = f"user {callsign} pass {passcode} vers PYTHON-APRS 1.0\n"
+            auth_message = f"user {callsign} pass {passcode} vers PYTHON-APRS 1.1n"
             s.send(auth_message.encode())
             print("Authentication sent.")
 
